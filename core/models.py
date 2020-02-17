@@ -4,7 +4,7 @@ from django.db import models
 
 class Meses(models.Model):
     mes = models.CharField(max_length=10, null=False)
-    obs = models.CharField
+    obs = models.TextField
 
     class Meta:
         verbose_name: 'Mês'
@@ -14,6 +14,20 @@ class Meses(models.Model):
 
     def __str__(self):
         return self.mes
+
+class Curso(models.Model):
+    curso = models.CharField(max_length=60, null=False)
+    obs = models.TextField
+
+    class Meta:
+        verbose_name: 'Curso'
+        verbose_name_plural: 'Cursos'
+        ordering = ['curso']
+        db_table = 'Curso'
+
+    def __str__(self):
+        return self.curso
+
 
 
 

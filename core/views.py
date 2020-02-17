@@ -1,7 +1,7 @@
 from random import randint
 from django.views.generic import TemplateView
 from chartjs.views.lines import BaseLineChartView
-from .models import Meses
+from .models import Meses, Curso
 
 class IndexView(TemplateView):
     template_name = 'index.html'
@@ -16,14 +16,9 @@ class DadosJSONView(BaseLineChartView):
 
     def get_providers(self):
         """Retorna os nomes dos datasets"""
-        datasets = [
-            "Programação para Leigos",
-            "Algorítmo e Lógica de Programação",
-            "Programação em C",
-            "Programação em Java",
-            "Programação em Python",
-            "Banco de Dados"
-        ]
+        cursos = Curso.objects.all()
+        datasets = list(map(str, cursos))
+
         return datasets
 
     def get_data(self):
