@@ -1,0 +1,9 @@
+beautifulsoup4==4.8.1
+Django==2.2.7
+django-bootstrap4==1.0.1
+django-chartjs==1.5.0
+django-jet==1.0.8
+pytz==2019.3
+six==1.13.0
+soupsieve==1.9.5
+sqlparse==0.3.0
