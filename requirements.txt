@@ -1,7 +1,7 @@
 beautifulsoup4==4.8.1
 certifi==2019.11.28
 chardet==3.0.4
-Django==2.2.7
+Django==2.2.21
 django-bootstrap4==1.0.1
 django-chartjs==1.5.0
 django-jet==1.0.8
